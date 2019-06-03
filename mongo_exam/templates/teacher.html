@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %} MongoExam {% endblock %} {% block content %}
+{% if loggedin %}
+<h1>Adding Questions</h1>
+<aside>No of questions added : {{ no }}
+    <hr>
+ <a href="/delq" > <button>delete all questions</button> </a> </aside>
+<form action="/addquestion" method='POST'>
+    
+      <h3>  Question: </h3><input type="textbox" name="qname" size="50" required> <br>
+        <h3>Options(select the correct option)</h3>
+      <p> <input type="radio" name="answer" value="a" required> <input type="text" name="a" required> <br>
+        <input type="radio" name="answer" value="b"> <input type="text" name="b" required> <br>
+        <input type="radio" name="answer" value="c"> <input type="text" name="c" required> <br>
+        <input type="radio" name="answer" value="d"> <input type="text" name="d" required> <br> <br>
+        <button type="submit">Add question</button>
+    </p>
+</form>
+{% else %}
+<h1>Teacher login </h1>
+<form action="/teacher" method="POST">
+    <p>
+        Email: <br> <input type="email" name="email"> <br> <br>
+        Password: <br> <input type="email" name="email">
+    </p>
+    <button type="submit">Login</button>
+</form>
+{% endif %}
+{% endblock %}

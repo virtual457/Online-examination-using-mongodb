@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %} MongoExam {% endblock %} {% block content %}
+<script lang="javascript">
+
+</script>
+<h1>Student Login</h1>
+
+<form action="student" method="POST">
+    <p>
+        Name: <br> <input type="text" name="name"> <br> <br>
+        USN: <br> <input type="text" name="usn">
+    </p>
+    <button type="submit">Start Test</button>
+</form>
+{% endblock %}

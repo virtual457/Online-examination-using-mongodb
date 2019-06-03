@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %} MongoExam {% endblock %} {% block content %}
+<form action="/submit" method="POST">
+{% set count = 1 %}
+{% for item in questions %}
+    <hr>
+    <h2>Question  {{ loop.index }}</h2>
+  
+    <h1>{{ item[1] }}</h1>
+    <hr>
+    <h4>
+        <input type="radio" name="answer{{loop.index}}" value="a" required> {{ item[2] }} <br>
+        <input type="radio" name="answer{{loop.index}}" value="b"> {{ item[3] }} <br>
+        <input type="radio" name="answer{{loop.index}}" value="c"> {{ item[4] }} <br>
+        <input type="radio" name="answer{{loop.index}}" value="d"> {{ item[5] }} <br>
+    </h4>
+    <hr>
+    {% endfor %}
+    <button type="submit" id="button1">Submit Answer</button>
+</form>
+{% endblock %}
