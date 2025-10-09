@@ -258,7 +258,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Chandan Gowda K S - chandan.keelara@gmail.com
+Chandan Gowda K S -chandan.keelara@gmail.com
 
 Project Link: [https://github.com/virtual457/Online-examination-using-mongodb](https://github.com/virtual457/Online-examination-using-mongodb)
 
